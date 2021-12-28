@@ -26,16 +26,16 @@ color: white;
 `
 const Info = styled.p`
 background-color: rgb(121, 0, 0);
-width: 17.5vh;
+width: 18vh;
 color: white;
 `
-function Items({ content, info , img }) {
+function Items({ content, children , img }) {
   return (
     <Myfooter>
             <Myimg src={img} alt="" />
         <Mydiv>
         <Title>{content}</Title>
-        <Info>{info}</Info>
+        <Info>{children}</Info>
 
         </Mydiv>
     </Myfooter>

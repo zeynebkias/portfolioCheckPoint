@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import Follow from './Follow'
 import Items from "./Items";
 import { contact } from "../assets/data/contact";
 
@@ -27,34 +26,39 @@ justify-content : center;
 gap:4rem;
 
 `
-const Myicon = styled.div`
-height: 0px;
-display: flex;
-justify-content : center;
-gap : 2px;
-margin-top: 2rem;
-margin-left : -12rem;
+// const Myicon = styled.div`
+// height: 10px;
+// display: flex;
+// justify-content : center;
+// gap : 2px;
+// margin-top: 2rem;
+// margin-left : -12rem;
+
+// `
+const Myimg = styled.img`
+height: 30px;
+width : 20%;
 
 `
+
 
 
 function Footer() {
     return (
         <Myfooter >
 
-          <Items img={call} content="Call" info={contact.phone}/>
-          <Items  img={email} content="Email"  info={contact.email}/>
-
-          <Items img={follow} content="Follow" />
-          <Myicon >
-          <Follow img={linkedin} link={contact.linkedin}/>
-          <Follow img={skype} link={contact.skype}/>
-          <Follow img={github} link={contact.github}/>
-          <Follow img={codepen} link={contact.codepen}/>
-          </Myicon>            
-          
-          <Items  img={c} content="GoMyCode" info='recreated by me'/>
-
+          <Items img={call} content="Call" ><p>{contact.phone}</p></Items>
+          <Items img={email} content="Email" ><p>{contact.email}</p></Items>
+          <Items img={follow} content="Follow" >
+            <div>
+                <Myimg src={linkedin}/>    
+                <Myimg src={skype}/>
+                <Myimg src={github}/>
+                <Myimg src={codepen}/>
+            </div>   
+          </Items>
+          <Items img={c} content="GoMyCode" ><p>Recreated by me</p></Items>
+                  
         </Myfooter>
     )
 }

@@ -13,7 +13,7 @@ height: 0px;
 function Follow({img, link}) {
     return (
         <Mydiv>
-            <Myimg src={img} alt={link}/>
+            <Myimg src={img} alt={link}/> 
 
         </Mydiv>
     )
